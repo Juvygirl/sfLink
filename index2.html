@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>SHOPEE FARM LINKS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--<meta http-equiv="refresh" content="30">-->
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+		  <script>
+    window.addEventListener("beforeunload", function (event) {
+      event.preventDefault();
+      event.returnValue = "";
+    });
+  </script>
+    </head>
+    <body oncopy="return false" oncut="return false">
+        <a id="top"></a>
+        <div id="container">
+            
+			<center>
+                <a href="index2.html"><img src="https://firebasestorage.googleapis.com/v0/b/my-test-project-8241d.appspot.com/o/images%2Fhead.PNG?alt=media&token=da824b3b-3f84-46e2-a73a-9fd2fad44731" alt="SHOPEE FARM LINKS" style="max-width: 100%;" /></a>
+            </center>
+			
+            
+			
+			<div id="postLink" style="display: none;">
+            
+			<h2 align="center" style="">CREATE POST</h2>
+
+                <form id="addst" name="addst" method="post" action="#">
+				    <div align="center">
+                        <div align="center" style="width: 90%; height: 50px;">
+                            <input type="text" id="title" name="title" pattern="https?://.+" placeholder="Link" required style="width: 100%; height: 100%;" />
+                        </div>
+                        <div align="center" style="width: 90%; height: 5px;"></div>
+                        <div align="center" style="width: 90%; height: 50px;">
+                            <input type="text" id="author" name="author" placeholder="Username" required style="width: 100%; height: 100%;" />
+                        </div>
+                        <div align="center" style="width: 90%; height: 5px;"></div>
+                        <div align="center" style="width: 90%; height: 200px;">
+                            <textarea id="quote" name="quote" required placeholder="Message" cols="33" rows="3" style="width: 100%; height: 100%;"></textarea>
+                        </div>
+                        <label id="alertHidlink" style="display: none;">
+                            <small><em>DUPLICATE LINKS IS NOT ALLOWED!!</em></small>
+                        </label>
+                        <div align="center" style="width: 90%; height: 5px;"></div>
+                    </div>
+
+                    <div align="center">
+                        <div align="center" style="width: 90%; height: 200px;">
+                            <button type="submit" id="save-button" style="background-color: rgba(1, 1, 1, 0.3);"><strong>POST NOW</strong></button>
+                            <div align="center" style="width: 90%; height: 5px;"></div>
+                            <button type="button" id="cancel-button"><strong>CANCEL</strong></button>
+                        </div>
+                    </div>
+                </form>
+
+                <form name="frm4" method="post" action="main.php">
+                    <input type="hidden" name="sid4" id="sid4" />
+                </form>
+				
+
+				
+            </div>
+
+            <div id="column1">
+			
+                <div align="center">
+                    <div align="center" style="width: 90%;">
+                        <button id="show-form-button" style="background-color: rgba(1, 1, 1, 0.3);"><strong>CREATE POST</strong></button>
+                    </div>
+                </div>
+
+                
+				
+				<div align="center" style="width: 90%; height: 8px;">
+				
+				</div>
+                
+				<table class="tbF" width="90%" align="center" id="st_tbl" style="table-layout: fixed; width: 90%;">
+				<th id = "header_notify"  style="display: none;"></th>
+				<tbody id="quote-table-body">
+                  <tr>
+				  <td>
+				  
+				  Retrieving data...
+				  
+				  </td>
+				  </tr>
+               </tbody>
+				
+                </table>
+                <form name="frm2" method="post" action="main_vote_submit.php">
+                    <input type="hidden" name="sid" id="sid" />
+                    <input type="hidden" name="sup" id="sup" />
+                    <input type="hidden" name="sdn" id="sdn" />
+                </form>
+                <form name="frm3" method="post" action="main_del_submit.php">
+                    <input type="hidden" name="sid2" id="sid2" />
+                </form>
+                <form name="frm4" method="post" action="main_add.php">
+                    <input type="hidden" name="sid4" id="sid4" />
+                </form>
+                
+				
+				<div align="center"><a href="">PREV</a> | <a href="main.php">HOME</a> | <a href="main_16_30.php">NEXT</a></div>
+                
+				
+				
+				
+				<br />
+
+                <div align="center">
+                    <div align="center" style="width: 90%;">
+                        <button style="background-color: rgba(1, 1, 1, 0.3);">
+                            <strong><a href="#top">RETURN TO TOP</a></strong>
+                        </button>
+                        <!--<input type="button" name="s_subm" id="s_subm" value="POST NEW"onclick="myFunction();">-->
+                    </div>
+                </div>
+				
+				
+				
+
+                <div align="center">
+                    <div id="showmodal" class="modal">
+                        <!--<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>-->
+                        <form class="modal-content">
+                            <div class="container2">
+                                <div align="right">
+								
+								<label id="m_close" align="right" style="font-weight: bold;">
+								[&times;]
+								</label></div>
+								
+								<input type="hidden" id="" />
+								<label id="delete_id">farmlink</label>
+												
+                                <bold><label id="m_username" style="font-weight: bold;">username</label></bold>
+                                <bold><label id="m_visitor" style="font-weight: bold; display: block;">visitor</label></bold>
+                                <br />
+                                <label id="m_link">farmlink</label>
+                                <br />
+                                <label id="toHid" style="display: none;">Enter This Link to Delete</label>
+                                <label id="toHid2" style="display: none;">
+                                    <small><em>(Copying links within this site is prohibited)</em></small>
+                                </label>
+                                <br />
+                                <br />
+                                <input id="toHid3" type="text" placeholder="Paste Link" oninput="document.getElementById('alertHid').style.display = 'none';" style="border: solid #777; width: 100%; display: none;" />
+                                <!--<label id="delID" style="display = 'none'">etwetwe</label>-->
+                                <label id="alertHid" style="display: none;">
+                                    <small><em>DELETE FAILED</em></small>
+                                </label>
+                                <div class="clearfix">
+                                    <button type="button" id="m_delete" class=" " style="background-color: #ddd; font-weight: bold;display: none;">DELETE</button>
+                                    <span>
+                                        <small>
+                                            <small>
+                                                <small><small>&nbsp;</small></small>
+                                            </small>
+                                        </small>
+                                    </span>
+                                    <button type="button" id="m_openlink" class="" style="background-color: #f44336; font-weight: bold;" onclick="openLink();">OPEN LINK</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <h5>
+                    <center>
+                        for inquiries:<br />
+                        Email: castlouie@yahoo.com
+                    </center>
+                </h5>
+
+                <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+                <script src="app.js"></script>
+            </div>
+        </div>
+    </body>
+</html>
